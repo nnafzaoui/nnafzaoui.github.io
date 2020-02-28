@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CameraGear</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script src="js/script.js"></script>
+        <div class="header">
+            <img onclick="showMenu()" id="humicon" src="img/hummenu.png">
+            <a href="CameraGear.html"><img id="logo" src="img/LOGO.png"></a>
+            <ul class="menu" id="list">
+                <li><a href="INSCRIPTION.html">INSCRIPTION</a></li>
+                <li style="border-bottom: 2px solid white;"><a href="Reservation.html">RESERVATION</a></li>
+                <li><a href="CameraGear.html">GALLERY</a></li>
+            </ul>
+        </div>
+        <div id="menumobile">
+            <div class="MM">
+                <img onclick="showMenu()" id="menuicon" src="img/xtn.png">
+                <ul id="menulist">
+                    <li><a href="INSCRIPTION.html">INSCRIPTION</a></li>
+                    <li><a href="Reservation.html">RESERVATION</a></li>
+                    <li><a href="CameraGear.html">GALLERY</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="contenu">
+            <div id="form">
+                <h5>Select Your Prefered Mark</h5>
+                <select  id="mySelect">
+                <option value="Choose">-Choose-</option>
+                <option value="Sony">Sony</option>
+                <option value="Canon">Canon</option>
+                <option value="Nikon">Nikon</option>
+                <option value="Dji">Dji</option>
+                </select><br/>
+                <h5>Enter Your Name</h5>
+                <input type="text" placeholder="Full Name" id="nom" required><br/>
+                <h5>Enter Your Year of birth</h5>
+                <input type="text" placeholder="YY" id="YY"><br/>
+                <h5>Rental Period</h5>
+                <input type="text" placeholder="Rental Period" id="PeroideL" required><br/>
+                <h5>Gear Model</h5>
+                <input type="text" placeholder="Gear Name and model" id="NbrL" required><br/>
+                <button class="button type2" onclick="age();">RESERV</button>
+            </div>
+            <div id="demo">
+            </div>
+        </div>
+        <footer class="footer">
+            <div>
+                <h1>ADRESS:</h1>
+                <h2>Safi,Morocco</h2>
+                <h2>City,Center</h2>
+                <h2>46000</h2>
+            </div>
+            <div>
+                <h1>Hours</h1>
+                <p>Monday | 10 A.M – 4 P.M </br>
+                    Tuesday | 10 A.M – 5 P.M |</br>               
+                    Wednesday | 10 A.M – 5 P.M</br>               
+                    Thursday | 10 A.M – 5 P.M</br>      
+                    Friday | 10 A.M – 5 P.M</br>          
+                    Saturday | 10 A.M – 2 P.M</br>                
+                    Sunday | CLOSED </br>
+                    </p>
+            </div>
+            <div>
+                <h2><a href="CameraGear.html">GALLERY</a></h2>
+                <h2><a href="Reservation.html">RESERVATION</a></h2>
+                <h2><a href="INSCRIPTION.html">INSCRIPTION</a></h2>
+            </div>
+            <div>
+                <h1>SOCIAL MEDIA</h1>
+                <h2>FACEBOOK</h2>
+                <h2>TWITTER</h2>
+            </div>
+        </footer>
+        <script>
+            //Partie d'Age
+            //création de variables
+          
+            //création de la fonction
+            function age(){
+            var anneeNaissance;
+            var age;
+            var phrase;
+            var annee = new Date().getFullYear()
+            var CarSelected;
+            var nom;
+            var prd;
+            var NBRPersonne;
+              //Attribution des valeurs a (donnée par l'utilisateur) et b (calculée par la fonction)
+              anneeNaissance = parseInt(document.getElementById("YY").value);
+              age = annee-anneeNaissance;
+              CarSelected = document.getElementById("mySelect").value;
+             nom = document.getElementById("nom").value;
+             prd=document.getElementById("PeroideL").value;
+             NBRPersonne=document.getElementById("NbrL").value;
+              //condition pour l'attribution de la valeur c selon l'age de la personne
+              if(age<18){
+                alert("Vous êtes mineur.");
+              }
+            else{
+    
+              
+               
+        document.getElementById("form").style.visibility = "hidden";
+        document.getElementById("demo").innerHTML= "Le modèle de voiture sélectionné est: "+CarSelected+"<br/>"+"Votre Nom est: " +nom+"<br/>"+"Votre Age est: "+age+"<br/>"+"Peroide de location est: "+prd+"<br/>"+"model is: "+NBRPersonne+"<br/><br/>";
+         // Create anchor element. 
+         var a = document.createElement('a');  
+                      // Create the text node for anchor element. 
+                      var link = document.createTextNode("Valider"); 
+                      // Append the text node to anchor element. 
+                      a.appendChild(link);  
+                      // Set the href property. 
+                      a.href = "Reservation.html"; 
+                      a.style.position="relative";
+                      a.style.top="-450px";       
+                      a.style.width="200px"  
+                      a.style.border="0.5px groove black"  
+                      // Append the anchor element to the body. 
+                      document.body.appendChild(a);
+            }
+            }
+        </script>
+        </body>
+    </html>

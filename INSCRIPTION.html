@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CameraGear</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div class="header">
+            <img onclick="showMenu()" id="humicon" src="img/hummenu.png">
+            <a href="CameraGear.html"><img id="logo" src="img/LOGO.png"></a>
+            <ul class="menu" id="list">
+                <li style="border-bottom: 2px solid white;"><a href="INSCRIPTION.html">INSCRIPTION</a></li>
+                <li><a href="Reservation.html">RESERVATION</a></li>
+                <li><a href="CameraGear.html">GALLERY</a></li>
+            </ul>
+        </div>
+        <div id="menumobile">
+            <div class="MM">
+                <img onclick="showMenu()" id="menuicon" src="img/xtn.png">
+                <ul id="menulist">
+                    <li><a href="INSCRIPTION.html">INSCRIPTION</a></li>
+                    <li><a href="Reservation.html">RESERVATION</a></li>
+                    <li><a href="CameraGear.html">GALLERY</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="Signup">
+            <form>
+                <h1>Sign - UP</h1>
+                <h3>Enter Your Email</h3>
+                <input type="email" placeholder="Email" required></br>
+                <h3>Enter Your Password</h3>
+                <input id="password" type="password" placeholder="Password" required></br>
+                <h3>Confirm Password</h3>
+                <input id="confirm_password" type="password" placeholder="Retype your Password" required></br>
+                <button>Sign-up</button>
+            </form>
+        </div>
+        <footer class="footer">
+            <div>
+                <h1>ADRESS:</h1>
+                <h2>Safi,Morocco</h2>
+                <h2>City,Center</h2>
+                <h2>46000</h2>
+            </div>
+            <div>
+                <h1>Hours</h1>
+                <p>Monday | 10 A.M – 4 P.M </br>
+                    Tuesday | 10 A.M – 5 P.M |</br>               
+                    Wednesday | 10 A.M – 5 P.M</br>               
+                    Thursday | 10 A.M – 5 P.M</br>      
+                    Friday | 10 A.M – 5 P.M</br>          
+                    Saturday | 10 A.M – 2 P.M</br>                
+                    Sunday | CLOSED </br>
+                    </p>
+            </div>
+            <div>
+                <h2><a href="CameraGear.html">GALLERY</a></h2>
+                <h2><a href="Reservation.html">RESERVATION</a></h2>
+                <h2><a href="INSCRIPTION.html">INSCRIPTION</a></h2>
+            </div>
+            <div>
+                <h1>SOCIAL MEDIA</h1>
+                <h2>FACEBOOK</h2>
+                <h2>TWITTER</h2>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+        <script>
+            var password = document.getElementById("password"),
+             confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+
+        </script>
+    </body>
+</html>

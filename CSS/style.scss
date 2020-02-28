@@ -1,0 +1,392 @@
+$clrteardrop: #EEF3FC;
+$clrdarkblue: #010738;
+$clrwhite: #FFFFFF;
+$clrblack: #000000;
+body {
+    background-image: url(../img/blackbackground.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+    margin: 0px;
+}
+#list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    li {
+        float: right;
+        a{
+            display: block;
+            color: $clrwhite;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+    }
+    }
+}
+// #list li {
+//     float: right;
+// }
+// #list li a{
+//         display: block;
+//         color: $clrwhite;
+//         text-align: center;
+//         padding: 14px 16px;
+//         text-decoration: none;
+//         font-size: 20px;
+// }
+#list li a:hover{
+    background-color: $clrblack;
+}
+#logo{
+    width: 250px;
+    height: 60px;
+    float: left;
+}
+.TITLE{
+    font-size: 20px;
+    color: $clrwhite;
+    margin-top: 10%;
+    margin-left: 50%;
+    margin-right: auto;
+    // position: relative;
+    // left: 50%;
+    // right: 13%;
+    // top: 60px;
+    // margin-left: 50%;
+    // margin-top: 5%;
+    // margin-right: 10%;
+    // margin-bottom: 50%;
+}
+#btn{
+    margin-top: 1%;
+    color: $clrblack;
+    background-color: $clrteardrop;
+    height: 60px;
+    width: 170px;
+    border: 0;
+    box-shadow: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#menumobile{
+    display: none;
+    color: $clrwhite;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: absolute;
+    top: -0px;
+}
+.MM{
+    display: flex;
+    justify-content:center;
+    margin-top: 250px;
+}
+#menulist{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    list-style: none;
+    font-size: 26px;
+    line-height:3;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+}
+#menuicon{
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
+#humicon{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+}
+.marks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20%;
+    height: 500px;
+    width: 100%;
+    #company{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 15%;
+        height: 40%;
+        background-color: $clrwhite;
+        border: 1px solid $clrblack;
+        img{
+            width: 50%;
+            height: 20%;
+        }
+    }
+}
+#H1g{
+    text-align: center;
+}
+.Parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .child{
+        display: flex;
+        div{
+            img{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}
+.Simage{
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+        .mySlides {
+            margin-top: 80px;
+            display:none;
+            img{
+                width: 80%;
+            }
+        }
+        #b1{
+            cursor: pointer;
+            width: 5%;
+            margin-top: 200px;
+        }
+        #b2{
+            cursor: pointer;
+            width: 5%;
+            margin-top: 200px;
+        }
+}
+.footer{
+    background-color: black;
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 15px;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+.rent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 90%;
+
+        }
+    }
+}
+.br{
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: $clrblack;
+    width:  250px;
+    height: 35px;
+    border: none;
+    margin-top: 15px;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $clrblack;
+    color: white;
+    border: 0.5px groove white;
+    width: 600px;
+    height: 800px;
+    h2,h5{
+        align-self: flex-start;
+        margin-left: 25px;
+    }
+    
+    input{
+        color: white;
+        font-size: 18px;
+        background-color: $clrblack;
+        width: 550px;
+        height: 49px;
+        border: 0.1px solid white;
+        text-transform: uppercase;
+    }
+    select{
+        color: white;
+        font-size: 18px;
+        background-color: $clrblack;
+        width: 550px;
+        height: 50px;
+    }
+    button{
+        margin-top: 30px;
+        margin-left: 25px;
+        align-self: flex-start;
+        background-color: white;
+        color: $clrblack;
+        width: 200px;
+        height: 50px;
+    }
+}
+.Signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $clrblack;
+    color: white;
+    border: 0.5px groove white;
+    width: 600px;
+    height: 800px;
+    input{
+        color: white;
+        font-size: 18px;
+        background-color: $clrblack;
+        width: 550px;
+        height: 49px;
+        border: 0.1px solid white;
+        text-transform: uppercase;
+    }
+    select{
+        color: white;
+        font-size: 18px;
+        background-color: $clrblack;
+        width: 550px;
+        height: 50px;
+    }
+    button{
+        margin-top: 30px;
+        margin-left: 25px;
+        align-self: flex-start;
+        background-color: white;
+        color: $clrblack;
+        width: 200px;
+        height: 50px;
+    }
+}
+#demo{
+    height: 400px;
+    position: absolute;
+    top: 40%;
+    color: white;
+    background-color: $clrblack;
+    border: 0.5px groove white;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+}
+a{
+   
+}
+#link1{
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    color: black;
+}
+@media only screen and (max-width: 1115px){
+    .marks{
+        flex-direction: column;
+        width: 100%;
+        #company{
+            width:300px;
+            height: 300px;
+        }
+    }
+    #list{
+        display: none;
+    }
+    #humicon{
+        display: block;
+    }
+    .TITLE{
+        font-size: 10px;
+        margin-top: 100px;
+    }
+    #logo{
+        margin-top: -94px;
+        width: 15%;
+        height: 4%;
+    } 
+    #btn{
+        height: 40px;
+        width: 120px;
+        font-size: 11px;
+    }
+    .rent{
+        flex-direction: column;
+    }
+    #form{
+        width: 100%;
+        height: 1000px;
+    }
+    .Signup{
+        width: 100%;
+        height: 1000px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .TITLE{
+        font-size: 9px;
+        margin-top: 50px;
+    }
+    #logo{
+        margin-top: -50px;
+    }
+    #btn{
+        font-size: 5px;
+        height: 15px;
+        width: 60px;
+        text-decoration: none;
+    }
+    .rent{
+        flex-direction: column;
+    }
+    .footer{
+        font-size: 6px;
+    }
+    #form{
+        input{
+            width: 300px;
+        }
+        select{
+            width: 300px;
+        }
+    }
+    .Signup{
+        input{
+            width: 300px;
+        }
+        select{
+            width: 300px;
+        }
+    }
+}
